@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AsProject-krouter.iml" filepath="$PROJECT_DIR$/.idea/modules/AsProject-krouter.iml" group="krouter" />
       <module fileurl="file://$PROJECT_DIR$/Krouter.iml" filepath="$PROJECT_DIR$/Krouter.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/krouter/krouter.iml" filepath="$PROJECT_DIR$/krouter/krouter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/krouter-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/krouter-app.iml" group="krouter/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/krouter/krouter-krouter.iml" filepath="$PROJECT_DIR$/.idea/modules/krouter/krouter-krouter.iml" group="krouter/krouter" />
     </modules>
   </component>
 </project>

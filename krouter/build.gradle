@@ -1,37 +1,19 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
-ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'krouter'
+//启用Jitpack 插件
+apply plugin: 'com.github.dcendents.android-maven'
 
-    publishedGroupId = 'com.github.denisidoro.github'
-    libraryName = 'Krouter'
-    artifact = 'krouter'
-
-    libraryDescription = 'A lightweight Android activity router'
-
-    siteUrl = 'https://github.com/denisidoro/krouter'
-    gitUrl = 'https://github.com/denisidoro/krouter.git'
-
-    libraryVersion = '0.0.2'
-
-    developerId = 'denisidoro'
-    developerName = 'Denis Isidoro'
-    developerEmail = 'denis_isidoro@live.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
+//设置Jitpack发布的Group
+//我的github账号是helen-x, 对应我的group就是com.github.helen-x
+group ='com.github.dazeGitHub'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 24
+        minSdkVersion 17
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
     }
@@ -41,24 +23,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-
-    testCompile 'org.mockito:mockito-core:1.10.19'
-    testCompile "org.robolectric:robolectric:3.1.2"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api 'androidx.appcompat:appcompat:1.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
-repositories {
-    mavenCentral()
-}
-
-apply from: 'install.gradle'
-apply from: 'bintray.gradle'

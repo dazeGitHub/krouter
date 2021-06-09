@@ -4,7 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import com.github.denisidoro.krouter.Schema.Type.*
 
 class Router(val url: String, val route: Route?,
@@ -25,6 +25,7 @@ class Router(val url: String, val route: Route?,
     }
 
     fun start() {
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK) //防止在 service 中启动 activity 提示 :
         context?.startActivity(intent)
     }
 

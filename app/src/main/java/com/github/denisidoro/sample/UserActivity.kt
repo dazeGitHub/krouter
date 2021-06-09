@@ -1,8 +1,8 @@
 package com.github.denisidoro.sample
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class UserActivity : AppCompatActivity() {
 
@@ -11,6 +11,6 @@ class UserActivity : AppCompatActivity() {
         setContentView(R.layout.activity_user)
 
         val user: Int = intent.getIntExtra("id", 0)
-        (findViewById(R.id.helloTV) as TextView).text = "Your user id is $user"
+        (findViewById<TextView>(R.id.helloTV)).text = "Your user id is $user"
     }
 }
